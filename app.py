@@ -2,7 +2,11 @@ from flask import Flask, render_template, request
 from flask_mysqldb import MySQL
 import mysql.connector
 import logging
+import boto3
+import json
 
+client = boto3.client('secretsmanager')
+response = client.get_secret_value(SecretId='RSDSecret')
 app = Flask(__name__)
 logging.basicConfig(filename='flask.log', level=logging.INFO,format='%(levelname)s:%(message)s')
 

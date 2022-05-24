@@ -13,7 +13,7 @@ logging.basicConfig(filename='flask.log', level=logging.INFO,format='%(levelname
 app.config['MYSQL_HOST'] = secretDict['host'],
 app.config['MYSQL_USER'] = secretDict['username'],
 app.config['MYSQL_PASSWORD'] = secretDict['password'],
-app.config['MYSQL_DB'] = secretDict['dbname'],
+app.config['MYSQL_DB'] = "regform"
 
 mydb = mysql.connector.connect(
   host=secretDict['host'],
@@ -30,7 +30,7 @@ mydb = mysql.connector.connect(
   host=secretDict['host'],
   user=secretDict['username'],
   password=secretDict['password'],
-  database=secretDict['dbname'],
+  database="regform"
 )
 
 mycursor = mydb.cursor()

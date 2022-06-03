@@ -9,9 +9,6 @@ jobs:
     - name: checkcode
       uses : actions/checkout@v2
       
-    - name: run super linter
-      uses : actions/super-linter@v3
-      
     - uses: actions/checkout@master
     - name: Set up Python 3.9
       uses: actions/setup-python@v1

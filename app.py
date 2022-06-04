@@ -1,9 +1,5 @@
-from flask import Flask
-app = Flask(__name__)
-
-@app.route('/')
-def hello_world():
-  return 'Hello World Suriya'
-
-if __name__ == '__main__':
-  app.run(host="0.0.0.0", port=80)
+from application import application
+with application.test_client() as c:
+    response = c.get('/')
+    assert response.data == b'Hello World!'
+    assert response.status_code == 200

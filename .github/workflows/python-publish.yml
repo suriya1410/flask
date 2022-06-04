@@ -22,7 +22,7 @@ jobs:
       # Run our unit tests
     - name: Run unit tests
       run: |
-        python app.py
+        python test_application.py
 #    - name: Publish distribution 📦 to PyPI
 #      if: startsWith(github.ref, 'refs/tags')
 #      uses: pypa/gh-action-pypi-publish@master

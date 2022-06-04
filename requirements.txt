@@ -1,1 +1,4 @@
-Flask
+flask
+flask_mysqldb
+mysql-connector-python
+boto3

@@ -30,7 +30,7 @@ jobs:
     - name: login to git
       uses: docker/login-action@v1
       with:
-        registry: ghcr.io
+        registry: "https://pypi.pkg.github.com"
         username: "suriya1410"
         password: "Suriya@1410"
       

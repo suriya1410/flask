@@ -19,7 +19,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Build package
-        run: test_application.py
+        run: application.py
       - name: Publish package
         uses: pypa/gh-action-pypi-publish@27b31702a0e7fc50959f5ad993c78deac1bdfc29
         with:
